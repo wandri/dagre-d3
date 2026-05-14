@@ -1,0 +1,45 @@
+/**
+ * @license
+ * Copyright (c) 2012-2013 Chris Pettitt
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+import dagre from "./lib/dagre";
+import graphlib from "./lib/graphlib";
+import intersect from "./lib/intersect";
+import render from "./lib/render";
+import * as util from "./lib/util";
+import version from "./lib/version";
+declare const dagreD3: {
+    graphlib: any;
+    dagre: any;
+    intersect: {
+        node: typeof import("./lib/intersect").node;
+        circle: typeof import("./lib/intersect").circle;
+        ellipse: typeof import("./lib/intersect").ellipse;
+        polygon: typeof import("./lib/intersect").polygon;
+        rect: typeof import("./lib/intersect").rect;
+    };
+    render: typeof render;
+    util: typeof util;
+    version: string;
+};
+export { graphlib, dagre, intersect, render, util, version };
+export default dagreD3;
+//# sourceMappingURL=index.d.ts.map
